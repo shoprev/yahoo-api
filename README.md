@@ -19,58 +19,112 @@ Or install it yourself as:
 
 ## Usage
 
+### Configure
+
+    Yahoo::Api.configure do |options|
+      options[:appid] = 'your api id'
+      options[:affiliate_type] = "vc or yid"
+      options[:affiliate_id] = "your affiliate id"
+    end
+
 ### Yahoo Shopping API
 
-Yahoo Shopping Item Search API v1
+Item Search API v1
 
-    res = Yahoo::Api::Shopping.item_search({:category_id => 13457})
+    res = Yahoo::Api::Shopping.item_search({:category_id => "13457"})
     res.code # 200
     res.message # "OK"
-    res["ResultSet"]["totalResultsReturned"].times 
 
-Yahoo Shopping Category Ranking API v1
-    def category_ranking(opts={})
-      Request.get("http://shopping.yahooapis.jp/ShoppingWebService/V1/json/categoryRanking", opts.merge(Yahoo::Api.options))
+    res["ResultSet"]["totalResultsReturned"].times do |i|
+      code = res["ResultSet"]["0"]["Result"]["#{i}"]["Code"]
+      ．．．
     end
 
-Yahoo Shopping Category Search API v1
-    def category_search(opts={})
-      Request.get("http://shopping.yahooapis.jp/ShoppingWebService/V1/json/categorySearch", opts.merge(Yahoo::Api.options))
+  or
+
+    res["ResultSet"]["0"]["Result"].each do |i,v|
+      next unless i =~ /\d+/
+      code = v["Code"]
+      ．．．
     end
 
-Yahoo Shopping Item Lookup API v1 
-    def item_lookup(opts={})
-      Request.get("http://shopping.yahooapis.jp/ShoppingWebService/V1/json/itemLookup", opts.merge(Yahoo::Api.options))
+Category Ranking API v1
+
+    res = Yahoo::Api::Shopping.category_ranking({:category_id => "13457"})
+    res["ResultSet"]["totalResultsReturned"].times do |i|
+      code = res["ResultSet"]["0"]["Result"]["#{i}"]["Code"]
+      ．．．
     end
 
-Yahoo Shopping Query Ranking API v1
-    def query_ranking(opts={})
-      Request.get("http://shopping.yahooapis.jp/ShoppingWebService/V1/json/queryRanking", opts.merge(Yahoo::Api.options))
+Category Search API v1
+
+    res = Yahoo::Api::Shopping.category_search({:category_id => "1"})
+    res["ResultSet"]["0"]["Result"]["Categories"]["Children"].each do |i,v|
+      next unless i =~ /\d+/
+      id = v["Id"]
+      ．．．
     end
 
-Yahoo Shopping Content Match Item API v1 
-    def content_match_item(opts={})
-      Request.get("http://shopping.yahooapis.jp/ShoppingWebService/V1/json/contentMatchItem", opts.merge(Yahoo::Api.options))
+Item Lookup API v1 
+
+    res = Yahoo::Api::Shopping.item_lookup({:itemcode => "hair_haclm352nn"})
+    res["ResultSet"]["0"]["Result"].each do |i,v|
+      next unless i =~ /\d+/
+      name = v["Name"]
+      ．．．
     end
 
-Yahoo Shopping Content Match Ranking API v1
-    def content_match_ranking(opts={})
-      Request.get("http://shopping.yahooapis.jp/ShoppingWebService/V1/json/contentMatchRanking", opts.merge(Yahoo::Api.options))
+Query Ranking API v1
+
+    res = Yahoo::Api::Shopping.query_ranking({:category_id => "13457"})
+    res["ResultSet"]["0"]["Result"].each do |i,v|
+      next unless i =~ /\d+/
+      url = v["Url"]
+      ．．．
     end
 
-Yahoo Shopping Get Module API v1
-    def get_module(opts={})
-      Request.get("http://shopping.yahooapis.jp/ShoppingWebService/V1/json/getModule", opts.merge(Yahoo::Api.options))
+Content Match Item API v1 
+
+    res = Yahoo::Api::Shopping.content_match_item({:url => "http://www.yahoo.co.jp/"})
+    res["ResultSet"]["0"]["Result"].each do |i,v|
+      next unless i =~ /\d+/
+      name = v["Name"]
+      ．．．
     end
 
-Yahoo Shopping Event Search API v1
-    def event_search(opts={})
-      Request.get("http://shopping.yahooapis.jp/ShoppingWebService/V1/json/eventSearch", opts.merge(Yahoo::Api.options))
+Content Match Ranking API v1
+
+    res = Yahoo::Api::Shopping.content_match_ranking({:url => "http://www.yahoo.co.jp/"})
+    res["ResultSet"]["0"]["Result"].each do |i,v|
+      next unless i =~ /\d+/
+      name = v["Name"]
+      ．．．
     end
 
-Yahoo Shopping Review Search API v1
-    def review_search(opts={})
-      Request.get("http://shopping.yahooapis.jp/ShoppingWebService/V1/json/reviewSearch", opts.merge(Yahoo::Api.options))
+Get Module API v1
+
+    res = Yahoo::Api::Shopping.get_module({:category_id => "13457",:position => "eventrecommend"})
+    res["ResultSet"]["0"]["Result"].each do |i,v|
+      next unless i =~ /\d+/
+      title = v["Title"]
+      ．．．
+    end
+
+Event Search API v1
+
+    res = Yahoo::Api::Shopping.event_search({:event_type => "store"})
+    res["ResultSet"]["0"]["Result"].each do |i,v|
+      next unless i =~ /\d+/
+      code = v["EventCode"]
+      ．．．
+    end
+
+Review Search API v1
+
+    res = Yahoo::Api::Shopping.review_search({:category_id => "13457"})
+    res["ResultSet"]["Result"].each do |v|
+      code = v["Target"]["Code"]
+      ．．．
     end
 
 ### Yahoo Auction API

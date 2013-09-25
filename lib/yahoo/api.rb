@@ -1,5 +1,6 @@
 require "net/http"
 require "uri"
+require "cgi"
 require "json"
 require "yahoo/api/version"
 require "yahoo/api/response"
