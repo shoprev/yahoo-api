@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://shopping.yahooapis.jp/ShoppingWebService/V1/json/contentMatchItem?affiliate_id=http%253A%252F%252Fck.jp.ap.valuecommerce.com%252Fservlet%252Freferral%253Fsid%253D2583199%2526pid%253D878377542%2526vc_url%253D&affiliate_type=vc&appid=dj0zaiZpPVBzbEY1RWlSNVd2biZzPWNvbnN1bWVyc2VjcmV0Jng9MTU-&url=http://www.yahoo.co.jp/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - shopping.yahooapis.jp
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Sep 2013 06:43:50 GMT
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - private
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {"ResultSet":{"totalResultsAvailable":"68890784","totalResultsReturned":6,"firstResultPosition":"1","0":{"Result":{"Request":{"Url":"http:\/\/www.yahoo.co.jp\/"},"0":{"Name":"\u30d5\u30e9\u30f3\u30c6\u30f3\u30d7\u30b9 \u8155\u6642\u8a08 \u30e1\u30f3\u30ba  \u30ac\u30f4\u30a1\u30eb\u30cb","Headline":"\u8155\u6642\u8a08 \u30e1\u30f3\u30ba \u4eba\u6c17 \u30e9\u30f3\u30ad\u30f3\u30b0 \u30bb\u30fc\u30eb","Url":"http:\/\/ck.jp.ap.valuecommerce.com\/servlet\/referral?sid=2583199&pid=878377542&vc_url=http%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsincere-inc%2Fgavarnie.html","Image":{"Id":"sincere-inc_gavarnie","Small":"http:\/\/item.shopping.c.yimg.jp\/i\/c\/sincere-inc_gavarnie"},"Price":{"_attributes":{"currency":"JPY"},"_value":"6825"},"PriceLabel":{"_attributes":{"taxIncluded":"true"},"FixedPrice":"","SalePrice":"6825"},"_attributes":{"index":"1"}},"1":{"Name":"\u30c9\u30eb\u30de\u30f3\u30ef\u30f3\u30d4\u30fc\u30b9 \u30cb\u30c3\u30c8\u30bd\u30fc\u9001\u6599\u7121\u6599E1079","Headline":"\u30ef\u30f3\u30d4\u30fc\u30b9\u30c9\u30eb\u30de\u30f3\u30b9\u30ea\u30fc\u30d6","Url":"http:\/\/ck.jp.ap.valuecommerce.com\/servlet\/referral?sid=2583199&pid=878377542&vc_url=http%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fkobelettuce%2Fe1079.html","Image":{"Id":"kobelettuce_e1079","Small":"http:\/\/item.shopping.c.yimg.jp\/i\/c\/kobelettuce_e1079"},"Price":{"_attributes":{"currency":"JPY"},"_value":"1000"},"PriceLabel":{"_attributes":{"taxIncluded":"true"},"FixedPrice":"3900","SalePrice":"1000"},"_attributes":{"index":"2"}},"2":{"Name":"\u30c1\u30ce\u30d1\u30f3\u30c4 \u30c1\u30ce\/\u30b9\u30ad\u30cb\u30fc\/\u30e1\u30f3\u30ba\/\u30c1\u30ce\u30d1\u30f3\u30ab\u30fc\u30b4\/\u5c0f\u5c3b\u30fb\u811a\u9577\/\u30ab\u30e9\u30fc","Headline":"\u30c1\u30ce\u30d1\u30f3 \u30ab\u30fc\u30b4\/\u30e1\u30f3\u30ba \u30dc\u30c8\u30e0\u30b9\/\u30d1\u30f3\u30c4\/\u30b8\u30fc\u30f3\u30ba","Url":"http:\/\/ck.jp.ap.valuecommerce.com\/servlet\/referral?sid=2583199&pid=878377542&vc_url=http%3A%2F%2Fstore.shopping.yahoo.co.jp%2Farcade%2Facbt0010.html","Image":{"Id":"arcade_acbt0010","Small":"http:\/\/item.shopping.c.yimg.jp\/i\/c\/arcade_acbt0010"},"Price":{"_attributes":{"currency":"JPY"},"_value":"2980"},"PriceLabel":{"_attributes":{"taxIncluded":"true"},"FixedPrice":"","SalePrice":"2980"},"_attributes":{"index":"3"}},"3":{"Name":"\u30af\u30ed\u30ce\u30b0\u30e9\u30d5 \u30af\u30ed\u30ce\u30b0\u30e9\u30d5\u8155\u6642\u8a08 \u30e1\u30f3\u30ba\u3000\u30ec\u30c7\u30a3\u30fc\u30b9 \u8155\u6642\u8a08  COGU \u30b3\u30b0 HALD","Headline":"\u30af\u30ed\u30ce\u30b0\u30e9\u30d5","Url":"http:\/\/ck.jp.ap.valuecommerce.com\/servlet\/referral?sid=2583199&pid=878377542&vc_url=http%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fmanato%2Fcoglibdeitonad0.html","Image":{"Id":"manato_coglibdeitonad0","Small":"http:\/\/item.shopping.c.yimg.jp\/i\/c\/manato_coglibdeitonad0"},"Price":{"_attributes":{"currency":"JPY"},"_value":"16800"},"PriceLabel":{"_attributes":{"taxIncluded":"true"},"FixedPrice":"58000","SalePrice":"16800"},"_attributes":{"index":"4"}},"4":{"Name":"\u672c\u9769\u30e9\u30a4\u30c0\u30fc\u30b9\u30b8\u30e3\u30b1\u30c3\u30c8\/\u30ec\u30b6\u30fc\u30b8\u30e3\u30b1\u30c3\u30c8\/\u30e9\u30a4\u30c0\u30fc\u30b9\u30b8\u30e3\u30b1\u30c3\u30c8","Headline":"\u30e9\u30a4\u30c0\u30fc\u30b9\u30b8\u30e3\u30b1\u30c3\u30c8\/\u30ec\u30b6\u30fc\u30b8\u30e3\u30b1\u30c3\u30c8\/\u672c\u9769","Url":"http:\/\/ck.jp.ap.valuecommerce.com\/servlet\/referral?sid=2583199&pid=878377542&vc_url=http%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fmacaronijazz%2Fri015.html","Image":{"Id":"macaronijazz_ri015","Small":"http:\/\/item.shopping.c.yimg.jp\/i\/c\/macaronijazz_ri015"},"Price":{"_attributes":{"currency":"JPY"},"_value":"6800"},"PriceLabel":{"_attributes":{"taxIncluded":"true"},"FixedPrice":"","SalePrice":"6800"},"_attributes":{"index":"5"}},"5":{"Name":"\u9078\u3079\u308b\u9a5a\u757016\u30d1\u30bf\u30fc\u30f3\u3055\u3089\u306b\u8c4a\u5bcc\u306a\u30b5\u30a4\u30ba\/\u30b1\u30fc\u30d6\u30eb\u30cb\u30c3\u30c8\/\u30ab\u30fc\u30c7\u30a3\u30ac\u30f3\/\u30b7\u30e7\u30fc\u30eb\u30ab\u30e9\u30fc\/\u30c9\u30f3\u30ad\u30fc\u887f","Headline":"\u30ab\u30fc\u30c7\u30a3\u30ac\u30f3","Url":"http:\/\/ck.jp.ap.valuecommerce.com\/servlet\/referral?sid=2583199&pid=878377542&vc_url=http%3A%2F%2Fstore.shopping.yahoo.co.jp%2Farcade%2Fpr10.html","Image":{"Id":"arcade_pr10","Small":"http:\/\/item.shopping.c.yimg.jp\/i\/c\/arcade_pr10"},"Price":{"_attributes":{"currency":"JPY"},"_value":"2980"},"PriceLabel":{"_attributes":{"taxIncluded":"true"},"FixedPrice":"","SalePrice":"2980"},"_attributes":{"index":"6"}},"_container":"Hit"}}}}
+    http_version: 
+  recorded_at: Tue, 24 Sep 2013 06:43:50 GMT
+recorded_with: VCR 2.5.0
