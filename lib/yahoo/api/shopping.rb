@@ -4,6 +4,17 @@ module Yahoo
 
     class Shopping
 
+      ItemSearch = "Yahoo::Api::Shopping.item_search"
+      CategoryRanking = "Yahoo::Api::Shopping.category_ranking"
+      CategorySearch = "Yahoo::Api::Shopping.category_search"
+      ItemLookup = "Yahoo::Api::Shopping.item_lookup"
+      QueryRanking = "Yahoo::Api::Shopping.query_ranking"
+      ContentMatchItem = "Yahoo::Api::Shopping.content_match_item"
+      ContentMatchRanking = "Yahoo::Api::Shopping.content_match_ranking"
+      GetModule = "Yahoo::Api::Shopping.get_module"
+      EventSearch = "Yahoo::Api::Shopping.event_search"
+      ReviewSearch = "Yahoo::Api::Shopping.review_search"
+
       class << self
         
         # Yahoo Shopping Item Search API v1

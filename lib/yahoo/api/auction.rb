@@ -4,6 +4,16 @@ module Yahoo
 
     class Auction
 
+      CategoryTree = "Yahoo::Api::Auction.category_tree"
+      CategoryLeaf = "Yahoo::Api::Auction.category_leaf"
+      SellingList = "Yahoo::Api::Auction.selling_list"
+      Search = "Yahoo::Api::Auction.search"
+      Item = "Yahoo::Api::Auction.item"
+      BidHistory = "Yahoo::Api::Auction.bid_history"
+      BidHistoryDetail = "Yahoo::Api::Auction.bid_history_detail"
+      ShowQAndA = "Yahoo::Api::Auction.show_q_and_a"
+      ShowRating = "Yahoo::Api::Auction.show_rating"
+
       class << self
         
         # Yahoo Auction Category Tree API v2

@@ -25,6 +25,10 @@ module Yahoo
         yield @@options
       end
 
+      def get(method,opts={})
+        eval "#{method}(#{opts})"
+      end
+
     end
 
   end

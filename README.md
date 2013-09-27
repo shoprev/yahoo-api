@@ -1,7 +1,7 @@
 # Yahoo::Api
 
 [![Gem Version](https://badge.fury.io/rb/yahoo-api.png)](http://badge.fury.io/rb/yahoo-api)
-Ruby Yahoo Japan Web API ( Shopping & Auction ) 
+Ruby Yahoo Japan Web API ( Shopping & Auction supported ) 
 
 ## Installation
 
@@ -19,21 +19,20 @@ Or install it yourself as:
 
 ## Usage
 
-### Configure
-
-```ruby
-Yahoo::Api.configure do |options|
-  options[:appid] = 'your api id'
-  options[:affiliate_type] = "vc or yid"
-  options[:affiliate_id] = "your affiliate id"
-end
-```
-
 ### Yahoo Shopping API
 
 Refer to [Shopping Web API documentation](http://developer.yahoo.co.jp/webapi/shopping/) for more infomation.
 
 ```ruby
+require 'yahoo/api'
+
+# configure
+Yahoo::Api.configure do |options|
+  options[:appid] = 'your api id'
+  options[:affiliate_type] = "vc or yid"
+  options[:affiliate_id] = "your affiliate id"
+end
+
 # Item Search API v1
 res = Yahoo::Api::Shopping.item_search({:category_id => "13457"})
 res.code # 200
