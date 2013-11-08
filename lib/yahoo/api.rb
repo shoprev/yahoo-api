@@ -25,6 +25,13 @@ module Yahoo
         yield @@options
       end
 
+      def merge(opts={})
+        opts.merge!(@@options)
+        ids = opts[:appid].split(",")
+        opts[:appid] = ids[rand(ids.size)]
+        opts
+      end
+
       def get(method,opts={})
         eval "#{method}(#{opts})"
       end

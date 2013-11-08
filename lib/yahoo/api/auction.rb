@@ -20,63 +20,63 @@ module Yahoo
         def category_tree(opts={})
           opts[:output] = 'json'
           opts[:callback] = 'callback'
-          Yahoo::Request.get("http://auctions.yahooapis.jp/AuctionWebService/V2/categoryTree", opts.merge(Yahoo::Api.options))
+          Yahoo::Request.get("http://auctions.yahooapis.jp/AuctionWebService/V2/categoryTree", Yahoo::Api.merge(opts))
         end
 
         # Yahoo Auction Category Leaf API v2
         def category_leaf(opts={})
           opts[:output] = 'json'
           opts[:callback] = 'callback'
-          Yahoo::Request.get("http://auctions.yahooapis.jp/AuctionWebService/V2/categoryLeaf", opts.merge(Yahoo::Api.options))
+          Yahoo::Request.get("http://auctions.yahooapis.jp/AuctionWebService/V2/categoryLeaf", Yahoo::Api.merge(opts))
         end
 
         # Yahoo Auction Selling List API v2
         def selling_list(opts={})
           opts[:output] = 'json'
           opts[:callback] = 'callback'
-          Yahoo::Request.get("http://auctions.yahooapis.jp/AuctionWebService/V2/sellingList", opts.merge(Yahoo::Api.options))
+          Yahoo::Request.get("http://auctions.yahooapis.jp/AuctionWebService/V2/sellingList", Yahoo::Api.merge(opts))
         end
 
         # Yahoo Auction Search API v2
         def search(opts={})
           opts[:output] = 'json'
           opts[:callback] = 'callback'
-          Yahoo::Request.get("http://auctions.yahooapis.jp/AuctionWebService/V2/search", opts.merge(Yahoo::Api.options))
+          Yahoo::Request.get("http://auctions.yahooapis.jp/AuctionWebService/V2/search", Yahoo::Api.merge(opts))
         end
 
         # Yahoo Auction Item API v2
         def item(opts={})
           opts[:output] = 'json'
           opts[:callback] = 'callback'
-          Yahoo::Request.get("http://auctions.yahooapis.jp/AuctionWebService/V2/auctionItem", opts.merge(Yahoo::Api.options))
+          Yahoo::Request.get("http://auctions.yahooapis.jp/AuctionWebService/V2/auctionItem", Yahoo::Api.merge(opts))
         end
 
         # Yahoo Auction Bid History API v1
         def bid_history(opts={})
           opts[:output] = 'json'
           opts[:callback] = 'callback'
-          Yahoo::Request.get("http://auctions.yahooapis.jp/AuctionWebService/V1/BidHistory", opts.merge(Yahoo::Api.options))
+          Yahoo::Request.get("http://auctions.yahooapis.jp/AuctionWebService/V1/BidHistory", Yahoo::Api.merge(opts))
         end
 
         # Yahoo Auction Bid History Detail API v1
         def bid_history_detail(opts={})
           opts[:output] = 'json'
           opts[:callback] = 'callback'
-          Yahoo::Request.get("http://auctions.yahooapis.jp/AuctionWebService/V1/BidHistoryDetail", opts.merge(Yahoo::Api.options))
+          Yahoo::Request.get("http://auctions.yahooapis.jp/AuctionWebService/V1/BidHistoryDetail", Yahoo::Api.merge(opts))
         end
 
         # Yahoo Auction Show Q & A API v1
         def show_q_and_a(opts={})
           opts[:output] = 'json'
           opts[:callback] = 'callback'
-          Yahoo::Request.get("http://auctions.yahooapis.jp/AuctionWebService/V1/ShowQandA", opts.merge(Yahoo::Api.options))
+          Yahoo::Request.get("http://auctions.yahooapis.jp/AuctionWebService/V1/ShowQandA", Yahoo::Api.merge(opts))
         end
 
         # Yahoo Auction Show Rating API v1
         def show_rating(opts={})
           opts[:output] = 'json'
           opts[:callback] = 'callback'
-          Yahoo::Request.get("http://auctions.yahooapis.jp/AuctionWebService/V1/ShowRating", opts.merge(Yahoo::Api.options))
+          Yahoo::Request.get("http://auctions.yahooapis.jp/AuctionWebService/V1/ShowRating", Yahoo::Api.merge(opts))
         end
 
       end
