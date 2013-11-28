@@ -2,6 +2,7 @@ require "net/http"
 require "uri"
 require "cgi"
 require "json"
+require 'active_support/core_ext'
 require "yahoo/api/version"
 require "yahoo/api/response"
 require "yahoo/api/request"

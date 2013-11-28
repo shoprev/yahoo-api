@@ -2,11 +2,15 @@ module Yahoo
 
   class Response
 
-    def initialize(response)
+    def initialize(response,format)
       @response =response
       body = @response.body
-      body = body[9..(body.rindex(")")-1)] if body.include?("callback(")
-      @body = JSON.parse(body)
+      if format == "json"
+        body = body[9..(body.rindex(")")-1)] if body.include?("callback(")
+        @body = JSON.parse(body)
+      else
+        @body = Hash.from_xml(body)
+      end
     end
 
     def code
