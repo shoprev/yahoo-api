@@ -1,7 +1,7 @@
 # Yahoo::Api
 
 [![Gem Version](https://badge.fury.io/rb/yahoo-api.png)](http://badge.fury.io/rb/yahoo-api)
-Ruby Yahoo Japan Web API ( Shopping & Auction supported ) 
+Ruby Yahoo Japan Web API ( Shopping,Auction,News supported ) 
 
 ## Installation
 
@@ -71,9 +71,11 @@ Yahoo::Api::Auction::BidHistory       # Bid History API v1
 Yahoo::Api::Auction::BidHistoryDetail # Bid History Detail API v1
 Yahoo::Api::Auction::ShowQAndA        # Show Q & A API v1
 Yahoo::Api::Auction::ShowRating       # Show Rating API v1
+# Yahoo News Web API
+Yahoo::Api::News::Topics   # Topics API v2
 ```
 
-Refer to [Shopping Web API documentation](http://developer.yahoo.co.jp/webapi/shopping/) or [Auction Web API documentation](http://developer.yahoo.co.jp/webapi/auctions/) for more infomation.
+Refer to [Shopping Web API documentation](http://developer.yahoo.co.jp/webapi/shopping/),[Auction Web API documentation](http://developer.yahoo.co.jp/webapi/auctions/),[News Web API documentation](http://developer.yahoo.co.jp/webapi/news/) for more infomation.
 
 ## Contributing
 
