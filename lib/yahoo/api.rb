@@ -7,7 +7,6 @@ require "yahoo/api/version"
 require "yahoo/api/response"
 require "yahoo/api/request"
 require "yahoo/api/shopping"
-require "yahoo/api/auction"
 require "yahoo/api/news"
 
 module Yahoo
